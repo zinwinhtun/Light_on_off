@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            width: 200px;
+            height: 250px;
+        }
+    </style>
+</head>
+<body>
+<img src="light-off.png" alt="" id="obj">
+<br>
+    <!-- <button onclick="lightOn()">ON</button>
+    <button onclick="lightOff()">OFF</button> -->
+    <button onclick="control()">Control</button>
+</body>
+<script>
+    // let img = document.getElementById("obj");
+    // function lightOn() {
+    //     img.src ="assents/light-on.jpg";
+    // }
+    // function lightOff() {
+    //     img.src ="assents/light-off.png";
+    // }
+    function control() {
+        let img = document.getElementById("obj");
+        let arr = img.src.split("/") ;
+        console.log(arr);
+        if (arr[arr.length-1] == "light-off.png") {
+            img.src = "light-on.jpg";
+        }else{
+            img.src = "light-off.png";
+        }
+    }
+</script>
+</html>
