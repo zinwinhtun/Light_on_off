@@ -18,7 +18,8 @@
     <button onclick="lightOff()">OFF</button> -->
     <button onclick="control()">Control</button>
 </body>
-<script>
+<script>
+
     function control() {
         let img = document.getElementById("obj");
         let arr = img.src.split("/") ;
@@ -29,5 +30,6 @@
             img.src = "light-off.png";
         }
     }
+
 </script>
 </html>
